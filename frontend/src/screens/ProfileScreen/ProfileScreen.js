@@ -37,13 +37,13 @@ const ProfileScreen = ({ location, history }) => {
     setPicMessage(null);
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
-      data.append("file", pics);
+      data.append("file", pic);
       data.append("upload_preset", "notezipper");
-      data.append("cloud_name", "piyushproj");
-      fetch("https://api.cloudinary.com/v1_1/piyushproj/image/upload", {
-        method: "post",
-        body: data,
-      })
+      data.append("cloud_name", "dqutisly6");
+      fetch("https://api.cloudinary.com/v1_1/dqutisly6/image/upload", {
+        method: "POST",
+        body: data
+    })
         .then((res) => res.json())
         .then((data) => {
           setPic(data.url.toString());
